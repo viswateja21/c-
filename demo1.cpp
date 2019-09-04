@@ -1,20 +1,27 @@
 #include<iostream>
 using namespace std;
 
-void g(int a, int b, int c);
-void g(int a, int b, int c = 11);
-void g(int a, int b = 22, int c);
+void disp(float s)
+{
+	cout << "float" << endl;
+}
+void disp(int s)
+{
+	cout << "int" << endl;
+}
+void disp(double s)
+{
+	cout << "double" << endl;
+}
+void disp(char s)
+{
+	cout << "char" << endl;
+}
 
-
-//void g(int a, int b= 22, int c= 11);
 
 int main()
 {
-	g(2);
+	int i = 97;
+	disp(i);
 	return 0;
-}
-
-void g(int a, int b, int c)
-{
-	cout << a << " " << b << " " << c << endl;
 }

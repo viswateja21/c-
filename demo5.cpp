@@ -1,34 +1,21 @@
 #include<iostream>
 using namespace std;
 
-class StringDemo
+
+void disp(double s)
 {
-	char *str; 
-public:
-	StringDemo() :str("hello")
-	{}
+	cout << "double" << endl;
+}
 
-	StringDemo(char *s) :str(new char[strlen(s) + 1])
-	{
-		strcpy(str, s);
-	}
+void disp(float a, ...)
+{
+	cout << "..." << endl;
+}
 
-	~StringDemo()
-	{
-		delete[] str;
-	}
-	void disp()
-	{
-		cout << str << endl;
-	}
-
-};
 
 int main()
 {
-	StringDemo s1;
-	s1.disp();
-	StringDemo s2("helloWorld");
-	s2.disp();
+	int i = 97;
+	disp(i);
 	return 0;
 }

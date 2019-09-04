@@ -1,18 +1,21 @@
 #include<iostream>
 using namespace std;
 
-void g(int a, int b, int c);
-void g(int a, int b, int c = 11);
-void g(int a, int b = 22, int c);
+
+void disp(int s)
+{
+	cout << "int" << endl;
+}
+
+void disp(int a, ...)
+{
+	cout << "..." << endl;
+}
+
 
 int main()
 {
-	void g(int a, int b, int c = 10);
-	g(2);
+	int i = 97;
+	disp(i);
 	return 0;
-}
-
-void g(int a, int b, int c)
-{
-	cout << a << " " << b << " " << c << endl;
 }
