@@ -1,23 +1,18 @@
 #include<iostream>
 using namespace std;
 
-class sample
-{
-public:
-	void set()
-	{
-		cout << "in set" << endl;
-	}
-	void display()const
-	{
-		cout << "in display" << endl;
-	}
-};
+void g(int a, int b, int c);
+void g(int a, int b, int c = 11);
+void g(int a, int b = 22, int c);
+
 int main()
 {
-	sample s1;
-	s1.display();
-	const sample s2;
-	s2.set();
+	void g(int a, int b, int c = 10);
+	g(2);
 	return 0;
+}
+
+void g(int a, int b, int c)
+{
+	cout << a << " " << b << " " << c << endl;
 }

@@ -1,23 +1,17 @@
 #include<iostream>
 using namespace std;
 
-class A
-{
-	int a;
-public:
-	A(int a)
-	{
-		this->a = a;
-	}
-	void disp()
-	{
-		cout << a << endl;
-	}
-};
+void g(int a, int b, int c);
+void g(int a, int b, int c = 11);
+void g(int a, int b = 22, int c = 12);
 
 int main()
 {
-	A a1(3);
-	a1.disp();
+	g(2);
 	return 0;
+}
+
+void g(int a, int b, int c)
+{
+	cout << a << " " << b << " " << c << endl;
 }
